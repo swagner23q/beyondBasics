@@ -1,3 +1,5 @@
+//Landing picture and header//
+
 header {
   margin: $zero;
   padding: $zero;
@@ -35,31 +37,42 @@ header {
     position: relative;
     bottom: 5em;
     .explore {
-      display: inline-block;
-      position: relative;
-      top: 9em;
-      left: 25px;
-      background: yellow;
+      @include displayForm(inline-block, $position: relative, $top: 9em, $left: 25px);
+      background: $browny;
       padding: 15px 0;
       width: 200px;
       text-align: center;
+      font-weight: bold;
       border-radius: .4em;
       &:hover {
         @extend %hover;
       }
       &:after {
+        @include displayForm(block, $position: absolute, $top: 100%, $left: 45%);
         content: '';
-        display: block;
-        position: absolute;
-        left: 45%;
-        top: 100%;
         width: 0;
         height: 0;
-        border-top: 10px solid yellow;
+        border-top: 10px solid $browny;
         border-right: 10px solid transparent;
         border-bottom: 10 solid transparent;
         border-left: 10px solid transparent;
       }
     }
   }
+}
+section {
+  margin: $zero;
+  padding: $zero;
+  height: 1400px;
+  width: 100%;
+  .trip1 {
+    background-image: url("../img/horseTrips.jpg");
+  }
+
+
+
+
+
+
+
 }

@@ -17,17 +17,8 @@ header .continent, header .headerSep {
   margin-right: auto;
   margin-left: auto; }
 
-nav li:hover, header .headerSep .explore:hover {
+nav li:first-child:hover, .nav2 li:nth-child(5):hover, header .headerSep .explore:hover {
   cursor: pointer; }
-
-nav li:first-child {
-  font-family: "Morpheus";
-  font-size: 2.25em;
-  margin-right: auto;
-  padding-right: 5em;
-  text-shadow: none; }
-  nav li:first-child:hover {
-    color: black; }
 
 nav {
   display: flex;
@@ -43,11 +34,48 @@ nav {
     font-size: 1.2em;
     display: inline;
     padding-right: 1.75em; }
-    nav li:hover {
-      color: #679a1e;
+    nav li:first-child {
+      font-family: "Morpheus";
+      font-size: 2.25em;
+      margin-right: auto;
+      padding-right: 5em;
       text-shadow: none; }
+      nav li:first-child:hover {
+        color: black; }
+      nav li:first-child:hover {
+        color: #679a1e;
+        text-shadow: none; }
   nav img {
     height: 1em; }
+
+.nav2 {
+  background-color: #343433;
+  color: #b3b3b3;
+  font-size: 20px;
+  border: 1px solid black;
+  box-shadow: 3px 3px 2px black; }
+  .nav2 ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-around; }
+  .nav2 li {
+    display: inline;
+    padding-left: 1em; }
+    .nav2 li:first-child {
+      font-weight: bold;
+      color: white; }
+    .nav2 li:nth-child(4) {
+      padding-right: .7em; }
+    .nav2 li:nth-child(5) {
+      color: #BC815E; }
+      .nav2 li:nth-child(5):hover {
+        color: #BC815E; }
+    .nav2 li:last-child {
+      margin-left: auto;
+      padding-right: 1em; }
+    .nav2 li:hover {
+      color: white; }
 
 header {
   margin: 0;
@@ -86,22 +114,31 @@ header {
       position: relative;
       top: 9em;
       left: 25px;
-      background: yellow;
+      background: #BC815E;
       padding: 15px 0;
       width: 200px;
       text-align: center;
+      font-weight: bold;
       border-radius: .4em; }
       header .headerSep .explore:after {
-        content: '';
         display: block;
         position: absolute;
-        left: 45%;
         top: 100%;
+        left: 45%;
+        content: '';
         width: 0;
         height: 0;
-        border-top: 10px solid yellow;
+        border-top: 10px solid #BC815E;
         border-right: 10px solid transparent;
         border-bottom: 10 solid transparent;
         border-left: 10px solid transparent; }
+
+section {
+  margin: 0;
+  padding: 0;
+  height: 1400px;
+  width: 100%; }
+  section .trip1 {
+    background-image: url("../img/horseTrips.jpg"); }
 
 /*# sourceMappingURL=styles.css.map */

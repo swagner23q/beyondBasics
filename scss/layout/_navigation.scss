@@ -1,12 +1,4 @@
-nav li:first-child {
-  @include fontBasics("Morpheus", $font-size: 2.25em);
-  margin-right: auto;
-  padding-right: 5em;
-  text-shadow: none;
-  &:hover {
-    color: $black;
-  }
-}
+//Top Nav Bar //
 
 nav {
   display: flex;
@@ -23,13 +15,62 @@ nav {
       font-size: 1.2em;
       display: inline;
       padding-right: 1.75em;
+      &:first-child {
+        @include fontBasics("Morpheus", $font-size: 2.25em);
+        margin-right: auto;
+        padding-right: 5em;
+        text-shadow: none;
+        &:hover {
+          color: $black;
+        }
       &:hover {
         @extend %hover;
         color: darken($limegreen, 20%);
         text-shadow: none;
       }
+    }
   }
   img {
     height: 1em;
+  }
+}
+
+//Bottom Nav Bar //
+.nav2 {
+  background-color: $charcoal;
+  color: darken($white, 30%);
+  font-size: 20px;
+  border: 1px solid $black;
+  box-shadow: 3px 3px 2px $black;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: space-around;
+  }
+  li {
+    display: inline;
+    padding-left: 1em;
+    &:first-child {
+      font-weight: bold;
+      color: $white;
+    }
+    &:nth-child(4) {
+      padding-right: .7em;
+    }
+    &:nth-child(5) {
+      color: $browny;
+      &:hover {
+        @extend %hover;
+        color: $browny;
+      }
+    }
+    &:last-child {
+      margin-left: auto;
+      padding-right: 1em;
+    }
+    &:hover {
+      color: $white;
+    }
   }
 }

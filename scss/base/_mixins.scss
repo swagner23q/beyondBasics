@@ -14,3 +14,10 @@
   font-size: $font-size;
   background-color: $background-color;
 }
+
+@mixin displayForm($display, $position: null, $top: null, $left: null) {
+  display: $display;
+  position: $position;
+  top: $top;
+  left: $left;
+}
