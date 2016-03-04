@@ -1,0 +1,59 @@
+.headerSep {
+  @extend %centerimg;
+  background: $white;
+  width: 250px;
+  height: .3em;
+  position: relative;
+  bottom: 5em;
+  .explore {
+    @include displayForm(inline-block, $position: relative, $top: 9em, $left: 25px);
+    background: $browny;
+    text-decoration: none;
+    color: $black;
+    padding: 15px 0;
+    width: 200px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: .4em;
+    @media (max-width: 645px) {
+      display: none;
+    }
+    &:after {
+      @include displayForm(block, $position: absolute, $top: 100%, $left: 45%);
+      content: '';
+      width: 0;
+      height: 0;
+      border-top: 10px solid $browny;
+      border-right: 10px solid transparent;
+      border-bottom: 10 solid transparent;
+      border-left: 10px solid transparent;
+    }
+  }
+}
+.iconBar {
+  position: absolute;
+  top: 75%;
+  left: 10%;
+  background: lighten($browny, 25%);
+  width: 50px;
+  height: .3em;
+}
+.trip p {
+  position: absolute;
+  top: 73%;
+  left: 10%;
+  color: $white;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.circleIcon {
+  height: 10vh;
+  border-radius: 4em;
+  &:hover {
+    transition: all .2s ease-in-out;
+    transform: scale(1.3);
+    box-shadow: 2px 2px 5px black;
+    cursor: pointer;
+  }
+}

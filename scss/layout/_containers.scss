@@ -1,5 +1,4 @@
 //Landing picture and header//
-
 header {
   @include backgroundImg("../img/kaerMorhen.jpg", $backPos: center, $backRep: no-repeat, $backSize: auto);
   margin: $zero;
@@ -26,38 +25,34 @@ header {
     position: relative;
     bottom: .75em;
   }
-  .headerSep {
-    @extend %centerimg;
-    background: $white;
-    width: 250px;
-    height: .3em;
-    position: relative;
-    bottom: 5em;
-    .explore {
-      @include displayForm(inline-block, $position: relative, $top: 9em, $left: 25px);
-      background: $browny;
-      padding: 15px 0;
-      width: 200px;
-      text-align: center;
-      font-weight: bold;
-      border-radius: .4em;
-      &:hover {
-        @extend %hover;
-      }
-      &:after {
-        @include displayForm(block, $position: absolute, $top: 100%, $left: 45%);
-        content: '';
-        width: 0;
-        height: 0;
-        border-top: 10px solid $browny;
-        border-right: 10px solid transparent;
-        border-bottom: 10 solid transparent;
-        border-left: 10px solid transparent;
-      }
-    }
-  }
 }
 section {
+  display: flex;
+  flex-wrap: wrap;
+  height: 50vh;
+  width: 100%;
+
+  .trip {
+    display: flex;
+    flex: 1 300px;
+    justify-content: center;
+  }
+  .trip1 {
+    @include backgroundImg("../img/horseTrips.jpg", $backPos: center, $backRep: no-repeat, $backSize: cover);
+    @extend %relative100Center;
+    flex-grow: 60;
+  }
+  .trip2 {
+    @include backgroundImg("../img/contractTrips.jpg", $backPos: center, $backRep: no-repeat, $backSize: cover);
+    @extend %relative100Center;
+  }
+  .trip3 {
+    @include backgroundImg("../img/marketTrips.jpg", $backPos: center, $backRep: no-repeat, $backSize: cover);
+    @extend %relative100Center;
+  }
+
+}
+.section2 {
   display: flex;
   flex-wrap: wrap;
   height: 50vh;
@@ -69,31 +64,18 @@ section {
     justify-content: center;
   }
 
-  .trip1 {
-    @include backgroundImg("../img/horseTrips.jpg", $backPos: center, $backRep: no-repeat, $backSize: cover);
-    @extend %hundredPercent;
-    flex-grow: 8;
-    align-items: center;
-    .circleIcon {
-      height: 10vh;
-      border-radius: 4em;
-    }
+  .trip4 {
+    @include backgroundImg("../img/cultureTrips.jpg", $backPos: center, $backRep: no-repeat, $backSize: cover);
+    @extend %relative100Center;
   }
-  .trip2 {
-    @include backgroundImg("../img/contractTrips.jpg", $backPos: center, $backRep: no-repeat, $backSize: cover);
-    @extend %hundredPercent;
-    align-items: center;
-    .circleIcon {
-      height: 10vh;
-    }
+  .trip5 {
+    @include backgroundImg("../img/customTrips.jpg", $backPos: center, $backRep: no-repeat, $backSize: cover);
+    @extend %relative100Center;
   }
-  .trip3 {
-    @include backgroundImg("../img/marketTrips.jpg", $backPos: center, $backRep: no-repeat, $backSize: cover);
-    @extend %hundredPercent;
-    flex-grow: 2;
-    align-items: center;
-    .circleIcon {
-      height: 10vh;
-    }
+  .trip6 {
+    @include backgroundImg("../img/photographyTrips.jpg", $backPos: center, $backRep: no-repeat, $backSize: cover);
+    @extend %relative100Center;
+    flex-grow: 60;
   }
+
 }

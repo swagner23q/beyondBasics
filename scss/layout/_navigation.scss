@@ -20,23 +20,35 @@ nav {
         margin-right: auto;
         padding-right: 5em;
         text-shadow: none;
-        &:hover {
-          color: $black;
+        @media (max-width: 645px) {
+          display:block;
+          padding-right: $zero;
         }
+      }
       &:hover {
         @extend %hover;
         color: darken($limegreen, 20%);
         text-shadow: none;
       }
-    }
+      @media (max-width: 645px) {
+        display: none;
+      }
   }
   img {
     height: 1em;
+  }
+  .hamburger {
+    display: none;
+    @media (max-width: 645px) {
+      @include displayForm(block, $position: relative, $top: 45px);
+      font-size: 2em;
+    }
   }
 }
 
 //Bottom Nav Bar //
 .nav2 {
+  margin-bottom: 3em;
   background-color: $charcoal;
   color: darken($white, 30%);
   font-size: 20px;

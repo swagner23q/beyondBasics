@@ -9,7 +9,10 @@
 %hover {
   cursor: pointer;
 }
-%hundredPercent {
+
+%relative100Center {
   height: 100%;
   width: 100%;
+  position: relative;
+  align-items: center;
 }
