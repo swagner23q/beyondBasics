@@ -20,6 +20,10 @@ header .continent, header .headerSep {
 nav li:first-child:hover, .nav2 li:nth-child(5):hover, header .headerSep .explore:hover {
   cursor: pointer; }
 
+section .trip1, section .trip2, section .trip3 {
+  height: 100%;
+  width: 100%; }
+
 nav {
   display: flex;
   flex-wrap: wrap;
@@ -78,14 +82,14 @@ nav {
       color: white; }
 
 header {
-  margin: 0;
-  padding: 0;
   background-image: url("../img/kaerMorhen.jpg");
-  height: 100vh;
-  width: auto;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: auto; }
+  background-size: auto;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: auto; }
   header .continent {
     margin-top: 5%;
     transform: rotate(40deg);
@@ -134,11 +138,40 @@ header {
         border-left: 10px solid transparent; }
 
 section {
-  margin: 0;
-  padding: 0;
-  height: 1400px;
-  width: 100%; }
+  display: flex;
+  flex-wrap: wrap;
+  height: 50vh;
+  width: 100vw; }
+  section .trip {
+    display: flex;
+    flex: 1 300px;
+    justify-content: center; }
   section .trip1 {
-    background-image: url("../img/horseTrips.jpg"); }
+    background-image: url("../img/horseTrips.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-grow: 8;
+    align-items: center; }
+    section .trip1 .circleIcon {
+      height: 10vh;
+      border-radius: 4em; }
+  section .trip2 {
+    background-image: url("../img/contractTrips.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center; }
+    section .trip2 .circleIcon {
+      height: 10vh; }
+  section .trip3 {
+    background-image: url("../img/marketTrips.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-grow: 2;
+    align-items: center; }
+    section .trip3 .circleIcon {
+      height: 10vh; }
 
 /*# sourceMappingURL=styles.css.map */
