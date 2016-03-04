@@ -9,21 +9,99 @@ html, body, .overLord {
   font-family: "Morpheus";
   src: url("../fonts/morpheus.ttf");
   src: url("../fonts/morpheus.ttf") format("truetype"); }
+header p, header h1 {
+  text-align: center; }
+
+header .continent, header .headerSep {
+  display: block;
+  margin-right: auto;
+  margin-left: auto; }
+
+nav li:hover, header .headerSep .explore:hover {
+  cursor: pointer; }
+
 nav li:first-child {
   font-family: "Morpheus";
-  font-size: 2em;
-  margin-right: auto; }
+  font-size: 2.25em;
+  margin-right: auto;
+  padding-right: 5em;
+  text-shadow: none; }
+  nav li:first-child:hover {
+    color: black; }
 
 nav {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between; }
+  justify-content: space-around;
+  width: 100%;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px white; }
   nav ul {
-    list-style: none; }
+    list-style: none;
+    margin-top: 6.5%; }
   nav li {
+    font-size: 1.2em;
     display: inline;
-    padding-right: 1em; }
+    padding-right: 1.75em; }
+    nav li:hover {
+      color: #679a1e;
+      text-shadow: none; }
   nav img {
     height: 1em; }
+
+header {
+  margin: 0;
+  padding: 0;
+  background-image: url("../img/kaerMorhen.jpg");
+  height: 100vh;
+  width: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto; }
+  header .continent {
+    margin-top: 5%;
+    transform: rotate(40deg);
+    height: 8%;
+    -webkit-filter: brightness(0.45);
+    filter: brightness(0.45); }
+  header p {
+    color: white;
+    font-size: 2em;
+    text-shadow: 1px 1px 3px black; }
+  header h1 {
+    font-family: "Morpheus";
+    color: white;
+    font-size: 6em;
+    text-shadow: 1px 1px 3px black;
+    position: relative;
+    bottom: .75em; }
+  header .headerSep {
+    background: white;
+    width: 250px;
+    height: .3em;
+    position: relative;
+    bottom: 5em; }
+    header .headerSep .explore {
+      display: inline-block;
+      position: relative;
+      top: 9em;
+      left: 25px;
+      background: yellow;
+      padding: 15px 0;
+      width: 200px;
+      text-align: center;
+      border-radius: .4em; }
+      header .headerSep .explore:after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 45%;
+        top: 100%;
+        width: 0;
+        height: 0;
+        border-top: 10px solid yellow;
+        border-right: 10px solid transparent;
+        border-bottom: 10 solid transparent;
+        border-left: 10px solid transparent; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,65 @@
+header {
+  margin: $zero;
+  padding: $zero;
+  background-image: url("../img/kaerMorhen.jpg");
+  height: 100vh;
+  width: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: auto;
+  .continent {
+    margin-top: 5%;
+    @extend %centerimg;
+    transform: rotate(40deg);
+    height: 8%;
+    -webkit-filter: brightness(0.45); filter: brightness(0.45);
+  }
+  p {
+    @extend %center;
+    color: white;
+    font-size: 2em;
+    text-shadow: 1px 1px 3px $black;
+  }
+  h1 {
+    @extend %center;
+    @include fontBasics("Morpheus", $color: white, $font-size: 6em);
+    text-shadow: 1px 1px 3px $black;
+    position: relative;
+    bottom: .75em;
+  }
+  .headerSep {
+    @extend %centerimg;
+    background: $white;
+    width: 250px;
+    height: .3em;
+    position: relative;
+    bottom: 5em;
+    .explore {
+      display: inline-block;
+      position: relative;
+      top: 9em;
+      left: 25px;
+      background: yellow;
+      padding: 15px 0;
+      width: 200px;
+      text-align: center;
+      border-radius: .4em;
+      &:hover {
+        @extend %hover;
+      }
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 45%;
+        top: 100%;
+        width: 0;
+        height: 0;
+        border-top: 10px solid yellow;
+        border-right: 10px solid transparent;
+        border-bottom: 10 solid transparent;
+        border-left: 10px solid transparent;
+      }
+    }
+  }
+}

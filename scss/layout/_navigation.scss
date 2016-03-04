@@ -1,20 +1,33 @@
 nav li:first-child {
-  @include fontBasics("Morpheus", $font-size: 2em);
+  @include fontBasics("Morpheus", $font-size: 2.25em);
   margin-right: auto;
+  padding-right: 5em;
+  text-shadow: none;
+  &:hover {
+    color: $black;
+  }
 }
 
 nav {
   display: flex;
   flex-wrap: wrap;
-  // width: 100%;
-  justify-content: space-between;
-
+  justify-content: space-around;
+  width: 100%;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px white;
   ul {
     list-style: none;
+    margin-top: 6.5%;
   }
   li {
+      font-size: 1.2em;
       display: inline;
-      padding-right: 1em;
+      padding-right: 1.75em;
+      &:hover {
+        @extend %hover;
+        color: darken($limegreen, 20%);
+        text-shadow: none;
+      }
   }
   img {
     height: 1em;
