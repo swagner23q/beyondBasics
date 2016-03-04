@@ -1,0 +1,29 @@
+html, body, .overLord {
+  cursor: url("../img/Sword.cur"), auto;
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+@font-face {
+  font-family: "Morpheus";
+  src: url("../fonts/morpheus.ttf");
+  src: url("../fonts/morpheus.ttf") format("truetype"); }
+nav li:first-child {
+  font-family: "Morpheus";
+  font-size: 2em;
+  margin-right: auto; }
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  nav ul {
+    list-style: none; }
+  nav li {
+    display: inline;
+    padding-right: 1em; }
+  nav img {
+    height: 1em; }
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,22 @@
+nav li:first-child {
+  @include fontBasics("Morpheus", $font-size: 2em);
+  margin-right: auto;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  // width: 100%;
+  justify-content: space-between;
+
+  ul {
+    list-style: none;
+  }
+  li {
+      display: inline;
+      padding-right: 1em;
+  }
+  img {
+    height: 1em;
+  }
+}
