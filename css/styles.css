@@ -25,7 +25,7 @@ header h1 {
   margin-right: auto;
   margin-left: auto; }
 
-.trip p:hover, .destinationsButton:hover, nav ul li:nth-child(3):hover, .nav2 li:nth-child(5):hover {
+.trip p:hover, .destinationsButton:hover, nav ul li:nth-child(n+3):nth-child(-n+6):hover, .nav2 li:nth-child(5):hover {
   cursor: pointer; }
 
 section .trip1, section .trip2, section .trip3, .section2 .trip4, .section2 .trip5, .section2 .trip6 {
@@ -33,6 +33,20 @@ section .trip1, section .trip2, section .trip3, .section2 .trip4, .section2 .tri
   width: 100%;
   position: relative;
   align-items: center; }
+
+nav ul li .destinationDrop, nav ul li .activitiesDrop, nav ul li .contractDrop, nav ul li .aboutDrop {
+  background-color: #343433;
+  font-size: .40em;
+  display: none;
+  position: absolute;
+  left: 0%;
+  top: 27px;
+  z-index: 1; }
+
+nav ul li p {
+  padding-left: 5%;
+  padding-bottom: 5%;
+  border-bottom: 1px solid grey; }
 
 .headerSep {
   background: white;
@@ -158,26 +172,24 @@ nav {
             padding-right: 0; } }
       nav ul li:hover {
         color: #BC815E; }
-      nav ul li:nth-child(3):hover {
+      nav ul li:nth-child(n+3):nth-child(-n+6):hover {
         color: #BC815E;
         background-color: #343433;
         border-radius: 2px 2px 0 0;
         text-shadow: none; }
       nav ul li .destinationDrop {
-        display: none;
-        position: absolute;
-        left: 0%;
-        top: 27px;
-        z-index: 1;
-        background-color: #343433;
-        font-size: .40em;
         width: 160%;
-        height: 195px; }
-        nav ul li .destinationDrop p {
-          padding-left: 5%;
-          padding-bottom: 5%;
-          border-bottom: 1px solid grey; }
-      nav ul li:nth-child(3):hover .destinationDrop {
+        height: 197px; }
+      nav ul li .activitiesDrop {
+        width: 183%;
+        height: 290px; }
+      nav ul li .contractDrop {
+        width: 153%;
+        height: 188px; }
+      nav ul li .aboutDrop {
+        width: 200%;
+        height: 189px; }
+      nav ul li:nth-child(3):hover .destinationDrop, nav ul li:nth-child(4):hover .activitiesDrop, nav ul li:nth-child(5):hover .contractDrop, nav ul li:nth-child(6):hover .aboutDrop {
         display: inline; }
       @media (max-width: 645px) {
         nav ul li {

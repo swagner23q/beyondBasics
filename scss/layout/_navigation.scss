@@ -31,7 +31,7 @@ nav {
         &:hover {
           color: $browny;
         }
-        &:nth-child(3):hover {
+        &:nth-child(n+3):nth-child(-n+6):hover {
           @extend %hover;
           color: $browny;
           background-color: $charcoal;
@@ -40,24 +40,34 @@ nav {
         }
         //drop down stuff //
         .destinationDrop {
-          display: none;
-          position: absolute;
-          left: 0%;
-          top: 27px;
-          z-index: 1;
-          background-color: $charcoal;
-          font-size: .40em;
+          @extend %dropDown;
           width: 160%;
-          height: 195px;
-          p {
-            padding-left: 5%;
-            padding-bottom: 5%;
-            border-bottom: 1px solid grey;
-          }
+          height: 197px;
         }
-        &:nth-child(3):hover .destinationDrop {
+        .activitiesDrop {
+          @extend %dropDown;
+          width: 183%;
+          height: 290px;
+        }
+        .contractDrop {
+          @extend %dropDown;
+          width: 153%;
+          height: 188px;
+        }
+        .aboutDrop {
+          @extend %dropDown;
+          width: 200%;
+          height: 189px;
+        }
+        p {
+          @extend %dropDownP;
+        }
+        &:nth-child(3):hover .destinationDrop, &:nth-child(4):hover .activitiesDrop,
+        &:nth-child(5):hover .contractDrop,
+        &:nth-child(6):hover .aboutDrop {
           display: inline;
         }
+        //Media Query//
         @media (max-width: 645px) {
           display: none;
         }

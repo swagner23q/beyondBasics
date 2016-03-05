@@ -3,7 +3,7 @@
 
 ~Description~
 
-This is a project for week 4 at Epicodus. It includes languages **HTML, CSS, and Sass**. The finished project will demonstrate ability to use flexbox, hover transitions/transforms, and previous knowledge of CSS.
+This is a project for week 4 at Epicodus. It includes languages **HTML, CSS, and Sass**. The finished project will demonstrate ability to use flexbox, hover transitions/transforms, and previous knowledge of CSS. It will replicate the layout of Artic Website (http://arcticwild.com/).
 
 ~~
 
