@@ -43,7 +43,7 @@ nav ul li .destinationDrop, nav ul li .activitiesDrop, nav ul li .contractDrop, 
   top: 27px;
   z-index: 1; }
 
-nav ul li p {
+nav ul li p, .nav2 li .moreDrop p {
   padding-left: 5%;
   padding-bottom: 5%;
   border-bottom: 1px solid grey; }
@@ -189,6 +189,8 @@ nav {
       nav ul li .aboutDrop {
         width: 200%;
         height: 189px; }
+      nav ul li p:hover {
+        color: #c0c0bf; }
       nav ul li:nth-child(3):hover .destinationDrop, nav ul li:nth-child(4):hover .activitiesDrop, nav ul li:nth-child(5):hover .contractDrop, nav ul li:nth-child(6):hover .aboutDrop {
         display: inline; }
       @media (max-width: 645px) {
@@ -226,13 +228,29 @@ nav {
     .nav2 li:nth-child(4) {
       padding-right: .7em; }
     .nav2 li:nth-child(5) {
+      position: relative;
+      padding-left: 20px;
+      padding-right: 10px;
       color: #BC815E; }
       .nav2 li:nth-child(5):hover {
-        color: #BC815E; }
+        background-color: #4e4e4c !important;
+        border-radius: 2px 2px 0 0; }
+      .nav2 li:nth-child(5):hover .moreDrop {
+        display: inline; }
+    .nav2 li .moreDrop {
+      display: none;
+      z-index: 1;
+      background-color: #4e4e4c;
+      position: absolute;
+      left: 0%;
+      height: 215px;
+      width: 140%; }
+      .nav2 li .moreDrop p:hover {
+        color: white; }
     .nav2 li:last-child {
       margin-left: auto;
       padding-right: 1em; }
-    .nav2 li:hover {
+    .nav2 li:nth-child(n+2):nth-child(-n+4):hover {
       color: white; }
 
 header {

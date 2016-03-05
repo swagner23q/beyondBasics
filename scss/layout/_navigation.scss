@@ -61,6 +61,9 @@ nav {
         }
         p {
           @extend %dropDownP;
+          &:hover {
+            color: lighten($charcoal, 55%);
+          }
         }
         &:nth-child(3):hover .destinationDrop, &:nth-child(4):hover .activitiesDrop,
         &:nth-child(5):hover .contractDrop,
@@ -110,17 +113,40 @@ nav {
       padding-right: .7em;
     }
     &:nth-child(5) {
+      position: relative;
+      padding-left: 20px;
+      padding-right: 10px;
       color: $browny;
       &:hover {
         @extend %hover;
-        color: $browny;
+
+        background-color: lighten($charcoal, 10%) !important;
+        border-radius: 2px 2px 0 0;
+      }
+      &:hover .moreDrop {
+        display: inline;
+      }
+    }
+    .moreDrop {
+      display: none;
+      z-index: 1;
+      background-color: lighten($charcoal, 10%);
+      position: absolute;
+      left: 0%;
+      height: 215px;
+      width: 140%;
+      p {
+        @extend %dropDownP;
+        &:hover {
+          color: $white;
+        }
       }
     }
     &:last-child {
       margin-left: auto;
       padding-right: 1em;
     }
-    &:hover {
+    &:nth-child(n+2):nth-child(-n+4):hover {
       color: $white;
     }
   }
