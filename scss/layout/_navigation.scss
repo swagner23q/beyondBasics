@@ -10,28 +10,57 @@ nav {
   ul {
     list-style: none;
     margin-top: 6.5%;
-  }
-  li {
-      font-size: 1.2em;
-      display: inline;
-      padding-right: 1.75em;
-      &:first-child {
-        @include fontBasics("Morpheus", $font-size: 2.25em);
-        margin-right: auto;
-        padding-right: 5em;
-        text-shadow: none;
-        @media (max-width: 645px) {
-          display:block;
-          padding-right: $zero;
+
+    li {
+        font-size: 1.2em;
+        display: inline-flex;
+        padding-left: 10px;
+        padding-right: 1.75em;
+        position: relative;
+        margin-right: 5px;
+        &:first-child {
+          @include fontBasics("Morpheus", $font-size: 2.25em);
+          margin-right: auto;
+          padding-right: 5em;
+          text-shadow: none;
+          @media (max-width: 645px) {
+            display:block;
+            padding-right: $zero;
+          }
         }
-      }
-      &:hover {
-        @extend %hover;
-        color: darken($limegreen, 20%);
-        text-shadow: none;
-      }
-      @media (max-width: 645px) {
-        display: none;
+        &:hover {
+          color: $browny;
+        }
+        &:nth-child(3):hover {
+          @extend %hover;
+          color: $browny;
+          background-color: $charcoal;
+          border-radius: 2px 2px 0 0;
+          text-shadow: none;
+        }
+        //drop down stuff //
+        .destinationDrop {
+          display: none;
+          position: absolute;
+          left: 0%;
+          top: 27px;
+          z-index: 1;
+          background-color: $charcoal;
+          font-size: .40em;
+          width: 160%;
+          height: 195px;
+          p {
+            padding-left: 5%;
+            padding-bottom: 5%;
+            border-bottom: 1px solid grey;
+          }
+        }
+        &:nth-child(3):hover .destinationDrop {
+          display: inline;
+        }
+        @media (max-width: 645px) {
+          display: none;
+        }
       }
   }
   img {

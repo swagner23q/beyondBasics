@@ -3,6 +3,8 @@ header {
   @include backgroundImg("../img/kaerMorhen.jpg", $backPos: center, $backRep: no-repeat, $backSize: auto);
   margin: $zero;
   padding: $zero;
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   width: auto;
   .continent {
@@ -13,7 +15,7 @@ header {
     -webkit-filter: brightness(0.45); filter: brightness(0.45);
   }
   p {
-    @extend %center;
+    align-self: center;
     color: white;
     font-size: 2em;
     text-shadow: 1px 1px 3px $black;
