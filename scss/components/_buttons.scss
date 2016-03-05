@@ -6,7 +6,7 @@
   position: relative;
   bottom: 5em;
   .explore {
-    @include displayForm(inline-block, $position: relative, $top: 9em, $left: 25px);
+    @include displayForm(inline-block, $position: relative, $top: 100px, $left: 25px);
     background: $browny;
     text-decoration: none;
     color: $black;
@@ -45,15 +45,51 @@
   color: $white;
   font-size: 20px;
   font-weight: bolder;
+  &:hover {
+    @extend %hover;
+  }
 }
 
 .circleIcon {
   height: 10vh;
   border-radius: 4em;
+  background-color: darken($white, 50%);
+  background-color: rgba(0,0,0,0.5);
   &:hover {
     transition: all .2s ease-in-out;
     transform: scale(1.3);
     box-shadow: 2px 2px 5px black;
     cursor: pointer;
+  }
+}
+.greySep {
+  margin: 1% 0;
+  position: absolute;
+  background: lighten($browny, 25%);
+  width: 150px;
+  height: .3em;
+}
+.destinationsButton {
+  @include displayForm(inline-block, $position: relative, $top: 55px, $left: 1px);
+  background: $browny;
+  text-decoration: none;
+  color: $black;
+  padding: 15px 0;
+  width: 200px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: .4em;
+  &:hover {
+    @extend %hover;
+  }
+  &:after {
+    @include displayForm(block, $position: absolute, $top: 100%, $left: 45%);
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 10px solid $browny;
+    border-right: 10px solid transparent;
+    border-bottom: 10 solid transparent;
+    border-left: 10px solid transparent;
   }
 }
