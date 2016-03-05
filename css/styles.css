@@ -286,7 +286,9 @@ aside {
   background-size: cover;
   display: flex;
   flex-direction: column;
-  padding: 5%; }
+  padding: 5%;
+  height: 100vh;
+  width: 100%; }
   aside h3 {
     color: #bfbfbf;
     font-size: 1.5em;
@@ -309,8 +311,5 @@ aside {
     width: 20%;
     border-bottom: 1px dashed black;
     margin-left: 8em; }
-  @media (max-width: 645px) {
-    aside {
-      margin-top: 10em; } }
 
 /*# sourceMappingURL=styles.css.map */
