@@ -1,6 +1,6 @@
 //Landing picture and header//
 header {
-  @include backgroundImg("../img/kaerMorhen.jpg", $backPos: center, $backRep: no-repeat, $backSize: auto);
+  @include backgroundImg("../img/kaerMorhen.jpg", $backPos: center, $backRep: no-repeat, $backSize: cover);
   margin: $zero;
   padding: $zero;
   display: flex;
